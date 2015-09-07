@@ -1,4 +1,4 @@
-# kubernetes-coreos-do 1.0.5
+# kubernetes-coreos-do v1.0.5
 Simple bootstrap config for quick start
 
 ### Installation
