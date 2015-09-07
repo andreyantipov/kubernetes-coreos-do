@@ -13,7 +13,7 @@ coreos:
   etcd2:
     listen-client-urls: http://0.0.0.0:2379,http://0.0.0.0:4001
     advertise-client-urls: http://0.0.0.0:2379,http://0.0.0.0:4001
-    initial-cluster: master=http://<master-private-ip>:2380
+    initial-cluster: master=http://$private_ip:2380
     proxy: on
   fleet:
     metadata: "role=node"
@@ -93,6 +93,21 @@ coreos:
         --healthz_port=10248
         Restart=always
         RestartSec=10
+    - name: kubectl.service
+      command: start
+      content: |
+        [Unit]
+        Description=Kubectl
+        Documentation=https://github.com/kubernetes/kubernetes/blob/master/docs/user-guide/kubectl/kubectl.md
+        Requires=kube-scheduler.service kube-controller-manager.service kube-apiserver.service
+        After=kube-scheduler.service kube-controller-manager.service kube-apiserver.service
+        [Service]
+        ExecStartPre=-/usr/bin/mkdir -p /opt/bin
+        ExecStartPre=/usr/bin/curl -L -o /opt/bin/kubectl -z /opt/bin/kubectl https://storage.googleapis.com/kubernetes-release/release/v1.0.5/bin/linux/amd64/kubectl
+        ExecStartPre=/usr/bin/chmod +x /opt/bin/kubectl
+        ExecStart=/opt/bin/kubectl
+        Restart=always
+        RestartSec=10
   update:
-    group: alpha
+    group: production
     reboot-strategy: off
