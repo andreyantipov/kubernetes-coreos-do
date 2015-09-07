@@ -4,4 +4,4 @@
 
 ## cloud-init-node.yaml
 
-<master-private-ip> — private ip address of master node
+`<master-private-ip>` — private ip address of master node
