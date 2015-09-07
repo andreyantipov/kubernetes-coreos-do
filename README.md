@@ -12,7 +12,7 @@ Create a new droplet via DO interface, and choose following options
   1. Available Settings: "Private Networking", "Enable User Data"
   1. Put cloud-config to user data textarea
   1. Select Image: CoreOS (stable)
-  1. Choose you SSH key
+  1. Choose your SSH key
   1. Press a "Create a Droplet" button
 
 ### Create Node Instance
@@ -25,7 +25,7 @@ Create a new droplet via DO interface, and choose following options
   1. Put cloud-config to user data textarea
   1. Set `<master-private-ip>` of master node in cloud config
   1. Select Image: CoreOS (stable)
-  1. Choose you SSH key
+  1. Choose your SSH key
   1. Press a "Create a Droplet" button
 
 ### Checking
