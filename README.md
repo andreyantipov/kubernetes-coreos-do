@@ -1,4 +1,5 @@
 # kubernetes-coreos-do 1.0.5
+Simple bootstrap config for quick start
 
 ### Installation
 Walkthrough for setup Kubernetes on CoreOS on DigitalOcean.
