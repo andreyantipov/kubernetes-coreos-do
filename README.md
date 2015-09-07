@@ -24,7 +24,7 @@ Create a new droplet via DO interface, and choose following options
   1. Select Region: Any with private networking support
   1. Available Settings: "Private Networking", "Enable User Data"
   1. Put cloud-config to user data textarea
-  1. Set `<master-private-ip>` of master node in cloud config
+  1. Replace `<master-private-ip>` by your master private ip address
   1. Select Image: CoreOS (stable)
   1. Choose your SSH key
   1. Press a "Create a Droplet" button
