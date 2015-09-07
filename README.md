@@ -19,7 +19,7 @@ Create a new droplet via DO interface, and choose following options
 ### Create Node Instance
 
 Create a new droplet via DO interface, and choose following options
-  1. Droplet Hostname: master
+  1. Droplet Hostname: node
   1. Select Size: Any
   1. Select Region: Any with private networking support
   1. Available Settings: "Private Networking", "Enable User Data"
