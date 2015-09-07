@@ -38,6 +38,15 @@ coreos:
   fleet:
     metadata: "role=master"
   units:
+    - name: install-kubectl
+      command: start
+      content: |
+        [Unit]
+        Description=Download kubectl utility file
+        [Service]
+        ExecStartPre= /usr/bin/curl -L -o /opt/bin/kubectl -z /opt/bin/kubectl https://storage.googleapis.com/kubernetes-release/release/v1.0.5/bin/linux/amd64/kubectl
+        RemainAfterExit=yes
+        Type=oneshot
     - name: generate-serviceaccount-key.service
       command: start
       content: |
