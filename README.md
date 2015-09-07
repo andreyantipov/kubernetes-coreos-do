@@ -29,6 +29,7 @@ Create a new droplet via DO interface, and choose following options
   1. Choose your SSH key
   1. Press a "Create a Droplet" button
 
-### Checking
+### Testing
 * Connect to master `ssh core@%MASTER_DROPLET_EXTERNAL_IP% -i IdentityFile`
-* `fleetctl list-machines` or `kubectl get nodes`
+* `fleetctl list-machines` 
+* `kubectl get nodes`
