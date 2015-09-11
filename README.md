@@ -23,7 +23,7 @@ Create a new droplet via DO interface, and choose following options
   1. Select Size: Any
   1. Select Region: Any with private networking support
   1. Available Settings: "Private Networking", "Enable User Data"
-  1. Put cloud-init-node config to user data textarea
+  1. Put [cloud-init-node](https://raw.githubusercontent.com/AndreyAntipov/kubernetes-coreos-do/master/cloud-init-node.yaml) config to user data textarea
   1. Replace `<master-private-ip>` by your master private ip address
   1. Select Image: CoreOS (stable)
   1. Choose your SSH key
